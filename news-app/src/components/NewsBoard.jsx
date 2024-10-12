@@ -3,7 +3,7 @@ import NewsItem from './NewsItem'
 const NewsBoard = ({category}) => {
     const [articles, setArticles] = useState([])
     useEffect(() => {
-        let url = `http://localhost:3000/api/news?category=${category}`;
+        let url = `https://newsiepie-server.onrender.com/api/news?category=${category}`;
         fetch(url).then(resonse => resonse.json()).then(data =>{
             console.log(data);
             setArticles(data.articles)
