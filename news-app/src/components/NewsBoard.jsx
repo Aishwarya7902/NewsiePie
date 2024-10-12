@@ -5,7 +5,7 @@ const NewsBoard = ({category}) => {
     useEffect(() => {
         let url = `https://newsiepie-server.onrender.com/api/news?category=${category}`;
         fetch(url).then(resonse => resonse.json()).then(data =>{
-            console.log(data);
+            
             setArticles(data.articles)
         })
     }, [category])
